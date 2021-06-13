@@ -12,7 +12,7 @@ mongoose.connect(url, { useNewUrlParser: true })
 // Fix: DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 mongoose.set('useCreateIndex', true)
 
-const personSchema = new mongoose.Schema({
+const personsSchema = new mongoose.Schema({
   name: {
     type: String,
     unique: true,
@@ -24,9 +24,9 @@ const personSchema = new mongoose.Schema({
   }
 })
 
-personSchema.plugin(uniqueValidator)
+personsSchema.plugin(uniqueValidator)
 
-personSchema.set('toJSON', {
+personsSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
@@ -34,4 +34,4 @@ personSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Person', personSchema)
+module.exports = mongoose.model('Person', personsSchema)
