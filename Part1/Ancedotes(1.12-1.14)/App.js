@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const App = (props) => {
+const data = (props) => {
   const anecdotes = [
     'If it hurts, do it more often',
     'Adding manpower to a late software project makes it later!',
@@ -33,4 +33,4 @@ const App = (props) => {
 }
 
 
-export default App
+export default data
