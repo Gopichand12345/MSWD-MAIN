@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const loginRouter = require('express').Router()
+const logginRouter = require('express').Router()
 const User = require('../models/User')
 
 loginRouter.post('/', async (request, response) => {
@@ -32,4 +32,4 @@ loginRouter.post('/', async (request, response) => {
 	})
 })
 
-module.exports = loginRouter
+module.exports = logginRouter
