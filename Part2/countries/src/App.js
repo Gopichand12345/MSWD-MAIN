@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import React, { useState, useEffect } from 'react'
 import Countries from './components/Countries'
 import Filter from './components/Filter'
@@ -11,7 +10,7 @@ function App() {
   const endpoint = 'https://restcountries.eu/rest/v2/all'
 
   
-  const hook = () => {
+  const data = () => {
     axios.get(endpoint).then((response) => {
       setCountries(response.data)
     })
