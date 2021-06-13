@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const App = () => {
+const data = () => {
   const [good,setGood]=useState(0)
   const [neutral,setNeutral]=useState(0)
   const[bad,setBad]=useState(0)
@@ -52,4 +52,4 @@ const Button =(props)=>{
     <button onClick={props.click}>{props.text}</button>
   )
 }
-export default App;
+export default data;
