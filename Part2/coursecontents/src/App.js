@@ -2,7 +2,7 @@
 import './App.css';
 import Course from './components/Course'
 const App = () => {
-  const courses = [
+  const data = [
     {
     id: 1,
     name: 'Half Stack application development',
