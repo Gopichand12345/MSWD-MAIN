@@ -21,8 +21,8 @@ const CountryInformation = (props) => {
     const [weather, setWeather] = useState({})
 
 
-    // Effect hook
-    const hook = () => {
+    // Effect data
+    const data = () => {
         axios.get(weatherURL).then((response) => {
             const temp = response.data.current.temperature
             const wind = response.data.current.wind_speed
@@ -31,7 +31,7 @@ const CountryInformation = (props) => {
             setWeather(weatherObject)
         })
     }
-    useEffect(hook, [])
+    useEffect(data, [])
 
     return (
         <div>
