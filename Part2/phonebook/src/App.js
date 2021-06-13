@@ -6,7 +6,7 @@ import phoneNumberService from './services/phoneNumbers'
 import Notification from './components/Notification'
 
 
-const App = () => {
+const data = () => {
 
   const [contacts, setContacts] = useState([])
   const [newName, setNewName] = useState('')
@@ -96,4 +96,4 @@ const App = () => {
 
 }
 
-export default App
+export default data
